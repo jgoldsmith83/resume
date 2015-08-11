@@ -21,7 +21,7 @@ html, body {
 
 #name {
 	display: block;
-	position: absolute;
+	position: fixed;
 	left: 1075px;
 	top: 500px;
 	font-family: Georgia;
@@ -32,7 +32,7 @@ html, body {
 
 #description	 {
 	display: block;
-	position: absolute;
+	position: fixed;
 	left: 1250px;
 	top: 590px;
 	font-family: Georgia;
@@ -43,7 +43,7 @@ html, body {
 
 #hire {
 	display:block;
-	position: absolute;
+	position: fixed;
 	left: 1250px;
 	top: 610px;
 	font-family: Georgia;
@@ -134,6 +134,16 @@ h3 {
 	margin-left: 180px;	
 	margin-top: 19px;
 
+}
+
+#filler {
+	position: absolute;
+	float: right;
+	right: 0;
+	top: 52%;
+	min-width: 506px;
+	min-height: 380px;
+	background-color: #000;
 }
 
 footer {
