@@ -32,7 +32,41 @@ function moveText() {
 }
 
 function animClick() {
-	
+	var scrollTo;
+
+	$('a:p').click(function(e) {
+		e.preventDefault();
+		
+		if(this === document.getElementById('name')){
+			scrollTo = document.getElementById('about_me');
+			scrollTo.scrollIntoView();
+		}
+		else if (this === document.getElementById('hire')){
+			scrollTo = document.getElementById('my_skills');
+			scrollTo.scrollIntoView();
+		}
+	});
 }
 
-$(document).ready(start);
+$(document).ready(start, animClick);
+
+
+var first = document.getElementById('first');
+var last = document.getElementById('last');
+var email = document.getElementById('email');
+var textArea = document.getElementsByTagName('Textarea');
+
+first.oninput = enableTextArea();
+
+last.oninput = enableTextArea();
+
+email.oninput = enableTextArea();
+
+function enableTextArea() {
+	var enable = first.value && last.value && email.value;
+	
+	if(enable){
+	textArea.removeAttribute('disabled');
+	}
+}
+

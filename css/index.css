@@ -21,7 +21,7 @@ html, body {
 
 #name {
 	display: block;
-	position: fixed;
+	position: absolute;
 	left: 1075px;
 	top: 500px;
 	font-family: Georgia;
@@ -32,7 +32,7 @@ html, body {
 
 #description	 {
 	display: block;
-	position: fixed;
+	position: absolute;
 	left: 1250px;
 	top: 590px;
 	font-family: Georgia;
@@ -43,7 +43,7 @@ html, body {
 
 #hire {
 	display:block;
-	position: fixed;
+	position: absolute;
 	left: 1250px;
 	top: 610px;
 	font-family: Georgia;
@@ -92,7 +92,7 @@ html, body {
 	position: absolute;
 	top: 200%;
 	min-width: 100%;
-	min-height: 100%;
+	min-height: 80%;
 	box-shadow: 0 25px 25px 0 #000;
 	z-index: 8;
 }
@@ -117,7 +117,7 @@ h1 {
 
 h3 {
 	position: absolute;
-	display: inline-block;
+	display: inline;
 	height: 23px;
 	width: 180px;
 	background-color: #3366ff;
@@ -136,14 +136,36 @@ h3 {
 
 }
 
-#filler {
-	position: absolute;
+#form {
 	float: right;
-	right: 0;
-	top: 52%;
-	min-width: 506px;
-	min-height: 380px;
-	background-color: #000;
+	position: relative;
+	right: 40px;
+	top: 240px;
+	width: 350px;
+}
+
+form fieldset {
+	display: inline-block;
+	float: right;
+	position: relative;
+	margin-bottom: 5px;
+	border: 0;
+}
+
+#form span {
+	top: -30px;
+	width: 200px;
+	left: -80px;
+}
+
+textarea {
+	position: absolute;
+	top: 210px;
+	//left: -5px;
+}
+
+input #form_first {
+	left: -20px;
 }
 
 footer {

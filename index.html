@@ -27,7 +27,7 @@
 
 		<div id="my_skills">
 			<p id="myskills">
-				<h1>My Skills&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h1>
+				<h1>Web Skills&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h1>
 
 					<div id="skills">
 						<span><h3>HTML / CSS         </h3></span>
@@ -43,7 +43,28 @@
 					</div>
 			</p>
 
-			<div id="filler"></div>
+			<div id="form">
+				<span>
+					<h3>Let's work together!</h3>
+					<div class="angle" id="form_angle"></div>
+				</span>
+
+				<form action="form_submit.php" method="post">
+					<fieldset class="form_left">
+						<label>First: </label><input type="text" id="first" name="First">
+					</fieldset>
+					<fieldset class="form_right">
+						<label>Last: </label><input type="text" id="last" name="Last">
+					</fieldset>
+					<fieldset class="form_left">
+						<label>Email: </label><input type="text" id="email" name="email">
+					</fieldset>
+					<fieldset class="form_right">
+						<label>Phone: </label><input type="text" id="phone" name="phone">
+					</fieldset>
+					<textarea rows="5" cols="40" placeholder="How can we work together?" wrap="soft" disabled='disabled'></textarea>
+				</form>
+			</div>
 			<footer>
 				<p>(c) Justin Goldsmith | DotSlashDesigns</p>
 				

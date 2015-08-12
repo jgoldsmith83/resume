@@ -1,0 +1,2 @@
+$servername = "localhost";
+$username = ""
