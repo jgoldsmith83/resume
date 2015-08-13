@@ -48,25 +48,33 @@ function animClick() {
 	});
 }
 
-$(document).ready(start, animClick);
 
+function disableTextArea() {
 
-var first = document.getElementById('first');
-var last = document.getElementById('last');
-var email = document.getElementById('email');
-var textArea = document.getElementsByTagName('Textarea');
+	var textArea = document.getElementsByTagName('textarea')[0];
+	textArea.disabled = true;
 
-first.oninput = enableTextArea();
+}
+window.onload = disableTextArea;
 
-last.oninput = enableTextArea();
+$('#first').bind('keyup', enableTextArea);
+$('#last').bind('keyup', enableTextArea);
+$('#email').bind('keyup', enableTextArea);
+$('#phone').bind('keyup', enableTextArea);
 
-email.oninput = enableTextArea();
 
 function enableTextArea() {
-	var enable = first.value && last.value && email.value;
-	
-	if(enable){
-	textArea.removeAttribute('disabled');
+
+	if($('#first').val() != "" && $('#last').val() != "" && $('#email').val() != ""){
+		$('#text_area').removeAttr('disabled');
+	} else {
+		$('#text_area').attr('disabled', true);
 	}
+
 }
+
+
+
+
+$(document).ready(start, enableTextArea);
 

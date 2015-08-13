@@ -60,9 +60,9 @@
 						<label>Email: </label><input type="text" id="email" name="email">
 					</fieldset>
 					<fieldset class="form_right">
-						<label>Phone: </label><input type="text" id="phone" name="phone">
+						<label>Phone: </label><input type="text" id="phone" name="phone" onkeydown="enableTextArea()">
 					</fieldset>
-					<textarea rows="5" cols="40" placeholder="How can we work together?" wrap="soft" disabled='disabled'></textarea>
+					<textarea id="text_area" rows="5" cols="40" placeholder="How can we work together?" wrap="soft"></textarea>
 				</form>
 			</div>
 			<footer>
@@ -86,6 +86,5 @@
 	</body>
 
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="js/QTransform.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 </html>	
