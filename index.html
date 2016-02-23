@@ -1,90 +1,163 @@
+
 <!DOCTYPE HTML>
 
 <html>
 	<head>
 		<meta lang="en">
 		<meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="css/index.css">
+
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="js/handlebars.js"></script>
 	</head>
 
 	<body>
-		<div id="landing">
-			<a href="#about_me">
-				<p id="name">[ Justin L Goldsmith ]</p>
-			</a>
-			<p id="description">Developer</p>
-			<a href="#my_skills">
-				<p id="hire">[Hire Me]</p>
-			</a>
-		</div>
+    <div class="container-fluid">
+  		<div id="landing">
+  			<p id="name">Justin L Goldsmith</p>
+  			<p id="description">Developer</p>
+  			<p id="hire">[Hire Me]</p>
+        <span class="glyphicon glyphicon-menu-down glyphicon-down-arrow" id="menu-down"></span>
+  		</div>
+    </div>
 
-		<div id="about_me">
-			<p id="aboutme">
-				I am a Charleston, SC native.<br>
-				Interested in working and thriving in the Lowcountry.
-			</p>
-		</div>
+  		<div class="container-fluid" id="about_me">
+  			<div id="aboutme">
+          <div id="about-inner">
+            <p>
+    				  I am a Charleston, SC native.<br>
+    				  Interested in working and thriving in the Lowcountry.
+            </p>
+          </div>
+  			</div>
 
+                          <span class="glyphicon glyphicon-menu-down glyphicon-down-arrow" id="menu-down-2"></span>
+  		</div>
+    </div>
+
+    <div class="container-fluid">
 		<div id="my_skills">
+      <div class="row about-content">
+      <div class="container-fluid col-sm-2 col-md-3 col-lg-3 col-xl-3 about-con border-right">
 			<p id="myskills">
-				<h1>Web Skills&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h1>
-
-					<div id="skills">
-						<span><h3>HTML / CSS         </h3></span>
-						<div class="angle" id="html_css"></div>
-						<span><h3>JavaScript         </h3></span>
-						<div class="angle" id="js"></div>
-						<span><h3>jQuery             </h3></span>
-						<div class="angle" id="jq"></div>
-						<span><h3>AngularJS          </h3></span>
-						<div class="angle" id="angular"></div>
-						<span><h3>Ionic (Hybrid Apps)</h3></span>
-						<div class="angle" id="ionic"></div>
-					</div>
+				<h3 id="title-left" class="banner">What I can do...&nbsp</h3>
 			</p>
+			<div id="skills">
+				<p><span><h3 class="list">HTML / CSS         </h3></span></p>
+				<p><span><h3 class="list">Bootstrap          </h3></span></p>
+        <p><span><h3 class="list">Handlebars         </h3></span></p>
+        <p><span><h3 class="list">JavaScript     </h3></span></p>
+        <p><span><h3 class="list">jQuery             </h3></span></p>
+				<p><span><h3 class="list">Meteor.js              </h3></span></p>
+				<p><span><h3 class="list">Python             </h3></span></p>
+			</div>
+    </div>
 
-			<div id="form">
-				<span>
-					<h3>Let's work together!</h3>
-					<div class="angle" id="form_angle"></div>
-				</span>
+    <div class="container-fluid col-sm-8 col-md-5 col-lg-5 col-xl-5 border-right">
+      <div id="info">
+        <h3 id="title-center" class="banner"> An introduction. </h3>
+        <p id="info-text">
+            I am Justin and I am currently seeking my first job as a web developer. Take a look around and you should
+            get a pretty good idea of what my experience, style, and interests are.
+            <br>
+            <br>
+            I have studied programming, web development, and web design since 2012. I am a graduate of
+            Trident Technical College with an Associates Degree in Computer Programming with a concenctration
+            in Web Programming.
+            <br>
+            In addition to web development, I am also an experienced Linux user and administrator. I have earned certificates
+            from the Linux Foundation in Linux Administration. I also have experience as an enterprise Windows Server
+            Administrator and Enterprise level Network Administrator.
+            <br>
+            <br>
+            Currently, I am studying responsive web design, python for informatics, and object oriented design and data structures
+            with Java (a precursor to Android app and system development).
+            <br>
+            <br>
+        </p>
+        <!--<table>
+          <tr>
+            <td>
+              <strong>My strengths:</strong>
+              <ul>
+                <li>CSS styling</li>
+                <li>JavaScript animation</li>
+                <li>Lazer Focus on projects</li>
+              </ul>
+            </td>
+            <td width="50px">
+            </td>
+            <td>
+              <strong>My weaknesses:</strong>
+              <ul>
+                <li>Breakpoint reflow</li>
+                <li>Database interaction</li>
+                <li>Documentation</li>
+              </ul>
+            </td>
+          </tr>
+        </table>-->
+      </div>
+    </div>
 
-				<form action="form_submit.php" method="post">
+    <div class="container-fluid col-sm-2 col-md-3 col-lg-3 col-xl-3">
+			<div id="form-container">
+        <h3 id="title-right" class="banner">Let's work together!</h3>
+				<form action="mailer.php" method="post">
 					<fieldset class="form_left">
-						<label>First: </label><input type="text" id="first" name="First">
+						<label for="first">First: &nbsp</label>
+            <input type="text" id="first" name="first">
 					</fieldset>
 					<fieldset class="form_right">
-						<label>Last: </label><input type="text" id="last" name="Last">
+						<label for="last">Last: &nbsp</label>
+            <input type="text" id="last" name="last">
 					</fieldset>
 					<fieldset class="form_left">
-						<label>Email: </label><input type="text" id="email" name="email">
+						<label for="email">Email: &nbsp</label>
+            <input type="text" id="email" name="email">
 					</fieldset>
 					<fieldset class="form_right">
-						<label>Phone: </label><input type="text" id="phone" name="phone" onkeydown="enableTextArea()">
+						<label for="phone">Phone: &nbsp</label>
+            <input type="text" id="phone" name="phone" onkeydown="enableTextArea()">
 					</fieldset>
-					<textarea id="text_area" rows="5" cols="40" placeholder="How can we work together?" wrap="soft"></textarea>
+          <fieldset>
+					  <textarea id="text_area" name="message" rows="5" cols="30" placeholder="How can we work together?" wrap="soft"></textarea>
+          </fieldset>
+          <br>
+          <fieldset>
+            <input id="submit" name="send-form" type="submit" value="Come work with us!">
+          </fieldset>
 				</form>
 			</div>
-			<footer>
-				<p>(c) Justin Goldsmith | DotSlashDesigns</p>
-				
+    </div>
+    </div>
+
+
+      <div class="row">
+        <div class="container-fluid col-md-12 col-lg-12 col-xl-12">
+			    <footer>
+            <div>
+				      <p>&#169; Justin Goldsmith | DotSlashDesigns</p>
+
 				<p>
 					<a href="mailto:justin@justingoldsmith.net">
-						justin@justingoldsmith.net
+						<span class="glyphicon glyphicon-envelope"></span> justin@justingoldsmith.net
 					</a>&nbsp | &nbsp
 					<a href="http://plus.google.com/+justingoldsmith/">
 						+Justin Goldsmith
-					</a>&nbsp | &nbsp 
+					</a>&nbsp | &nbsp
 					<a href="https://twitter.com/DotSlashAttack">
 						@DotSlashAttack
 					</a>
 				</p>
+        </div>
 			</footer>
+    </div>
 		</div>
 
-
+	<script type="text/javascript" src="js/index.js"></script>
 	</body>
 
-	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
-</html>	
+</html>

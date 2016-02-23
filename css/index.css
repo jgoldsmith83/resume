@@ -1,147 +1,324 @@
 
+@font-face {
+  font-family: "Typography Times";
+  src: url("Typography_Times.ttf") format('truetype');
+}
+
 @-webkit-keyframes moverotate{
 	0% {
 		-webkit-transform: rotate(-25deg);
 	}
-	50%{
+	50% {
 		-webkit-transform: rotate(25deg);
 	}
-	100%{
+	100% {
 		-webkit-transform: rotate(-25deg);
 	}
 
 	-webkit-animation-fill-mode: forwards;
 }
 
+@keyframes moverotate{
+	0% {
+		transform: rotate(-25deg);
+	}
+	50% {
+		transform: rotate(25deg);
+	}
+	100% {
+		transform: rotate(-25deg);
+	}
+
+	animation-fill-mode: forwards;
+}
+
 html, body {
 	margin: 0;
 	padding: 0;
 	border: 0;
+  max-width: 100%;
 }
 
-#name {
-	display: block;
-	position: absolute;
-	left: 1075px;
-	top: 500px;
-	font-family: Georgia;
-	font-size: 3em;
-	color: #fff;
-	-webkit-transform: rotate(-25deg);
+div {
+  border: 0;
+  margin: 0;
 }
 
-#description	 {
-	display: block;
-	position: absolute;
-	left: 1250px;
-	top: 590px;
-	font-family: Georgia;
-	font-size: 2em;
-	color: #fff;
-	-webkit-transform: rotate(-25deg);
+.container-fluid {
+  padding: 0;
 }
 
-#hire {
-	display:block;
-	position: absolute;
-	left: 1250px;
-	top: 610px;
-	font-family: Georgia;
-	font-size: 2.5em;
-	color: #fff;
-	-webkit-transform: rotate(-25deg);
-}
-
-.landing-text {
-	-webkit-animation: moverotate 2s;
+.row {
+  width: 100%;
 }
 
 #landing {
-	position: absolute;
-	min-width: 100%;
-	min-height: 100%;
-	margin: 0;
-	padding: 0;
-	border: 0;
-	background: #ffffff url("../images/space.jpg") no-repeat scroll center center;
-	background-size: cover;
-	box-shadow: 0 25px 25px 0 #000;
-	z-index: 10;
+position: absolute;
+width: 100%;
+min-height: 100%;
+margin: 0;
+padding: 0;
+border: 0;
+background: #ffffff url("../images/space.jpg") no-repeat scroll center center;
+background-size: cover;
+box-shadow: 0 25px 25px 0 #000;
+z-index: 10;
+}
+
+#name {
+display: block;
+position: absolute;
+//border-bottom: 2px solid #fff;
+text-decoration: underline;
+padding: -20px;
+margin: -5px;
+top: 45%;
+left: 40%;
+font-family: 'Typography Times', Georgia, Serif;
+font-size: 3em;
+color: #fff;
+//-webkit-transform: rotate(-25deg);
+//-moz-transform: rotate(-25deg);
+}
+
+#description	 {
+display: block;
+position: absolute;
+top: 50%;
+left: 52.5%;
+font-family: 'Typography Times', Georgia, Serif;
+font-size: 2em;
+color: #fff;
+//-webkit-transform: rotate(-25deg);
+//-moz-transform: rotate(-25deg);
+}
+
+#hire {
+display: block;
+position: absolute;
+top: 93%;
+left: 85.5%;
+font-family: 'Typography Times', Georgia, Serif;
+font-size: 2.5em;
+color: #fff;
+//-webkit-transform: rotate(-25deg);
+//-moz-transform: rotate(-25deg);
+}
+
+.glyphicon-down-arrow {
+  color: #fff;
+  font-size: 1.5em;
+  position: absolute;
+  display: inline;
+  top: 95%;
+  left: 95%;
+}
+
+#menu-down:hover {
+  cursor: pointer;
+}
+
+#menu-down-2:hover {
+  cursor: pointer;
 }
 
 #about_me {
-	position: absolute;
-	top: 100%;
-	min-width: 100%;
-	min-height: 100%;
-	background: #ffffff url("https://lh3.googleusercontent.com/Bm8yMShVaM3PMYzrwdH9NtQQ-LG5w_PDKhejOytXUvAo=w1451-h815-no") no-repeat scroll center center;
-	background-size: cover;
-	box-shadow: 0 25px 25px 0 #000;
-	z-index: 9;
+position: absolute;
+top: 100%;
+width: 100%;
+min-height: 100%;
+background: #ffffff url("https://lh3.googleusercontent.com/Bm8yMShVaM3PMYzrwdH9NtQQ-LG5w_PDKhejOytXUvAo=w1451-h815-no") no-repeat scroll center center;
+background-size: cover;
+box-shadow: 0 25px 25px 0 #000;
+z-index: 9;
 }
 
 #aboutme {
-	color: #fff;
-	text-align: center;
-	position: absolute;
-	top: 490px;
-	left: 450px;
-	font-size: 2em;
+color: #fff;
+text-align: center;
+position: relative;
+background-color: #fff;
+color: #000;
+opacity: .5;
+//width: 100%;
+margin-top: 31%;
+//left: 450px;
+font-size: 2em;
+font-family: 'Typography Times', Georgia, Serif;
 }
+
 #my_skills {
-	position: absolute;
-	top: 200%;
-	min-width: 100%;
-	min-height: 80%;
-	box-shadow: 0 25px 25px 0 #000;
-	z-index: 8;
+position: absolute;
+top: 200%;
+border: 0;
+margin: 0;
+padding: 0;
+left: 0;
+width: 100%;
+height: 80%;
+box-shadow: 0 25px 25px 0 #000;
+background: #FFFFFF url("../images/keys2.jpg") no-repeat scroll center center;
+background-size: 100%;
+z-index: 7;
 }
 
-h1 {
-	position: absolute;
-	top: 140px;
-	left: 230px;
-	background-color: #3366ff;
-	color: #ffffff;
+.about-con {
+  position: relative;
+  left: 10%;
+  background-color: #fff;
+  opacity: .8;
+  height: 425px;
+  padding: 12px;
 }
 
-
-
-#skills{
-	position: absolute;
-	width: 200px;
-	height: 220px;
-	top: 200px;
-	left: 250px;
+.about-content {
+  margin: 0;
+  //margin-top: 2%;
+  width: 100%;
+  height: 80%;
+  border: 0;
+  //display: none;
 }
 
-h3 {
-	position: absolute;
-	display: inline;
+#title-center {
+  position: relative;
+  padding: 2px;
+  //margin-top: 4%;
+  width: 100%;
+  text-align: center;
+}
+
+#title-left {
+  padding: 2px;
+  margin-top: 1.5%;
+  float: right;
+  margin-right: 5.9%;
+  border-radius: 0 2px 0 0;
+}
+
+#title-right {
+  padding: 2px;
+  margin-top: 4%;
+  float: left;
+  margin-left: 4%;
+  text-align: right;
+  border-radius: 2px 0 0 0;
+}
+
+.banner {
+	-webkit-box-shadow: 5px 5px 20px 2px #000000;
 	height: 23px;
 	width: 180px;
-	background-color: #3366ff;
+	background-color: #388E8E;
 	color: #ffffff;
-	margin-bottom: 5px;
+	margin-bottom: 15px;
+  font-size: 1.3em;
+  font-family: 'Typography Times', Georgia, Serif;
 }
 
-.angle {
-	width: 0;
-	height: 0;
-	border-top: 23px solid #3366ff;
-	border-right: 23px solid transparent;
-	display: inline-block;
-	margin-left: 180px;	
-	margin-top: 19px;
-
-}
-
-#form {
-	float: right;
+#skills{
 	position: relative;
-	right: 40px;
-	top: 240px;
-	width: 350px;
+	//width: 205px;
+	//height: 350px;
+	top: 25%;
+	//left: 5px;
+  font-family: 'Typography Times', Georgia, Serif;
+}
+
+.list {
+  border-bottom: 2px solid #388E8E;
+	height: 23px;
+	width: 180px;
+  padding: 5px;
+  margin-left: 10px;
+	background-color: transparent;
+	color: #000;
+  border-radius: 5px;
+  font-size: 1.4em;
+  font-family: 'Typography Times', Georgia, Serif;
+}
+
+#info {
+  position: relative;
+  //border: 1px solid black;
+  width: 80%;
+  height: 500px;
+  margin-top: 5%;
+  margin-left: 18.5%;
+  //padding-top: 5%;
+  background-color: #fff;
+  opacity: .8;
+  color: #000;
+  font-size: 1.05em;
+  font-weight: bold;
+  font-family: 'Typography Times', Georgia, Serif;
+  box-shadow: 0 0 20px 10px #000000;
+  -webkit-box-shadow: 0 0 20px 5px #000000;
+  z-index: 8;
+}
+
+table {
+  position: relative;
+  left: 17%;
+}
+
+#info-text {
+  padding: 10px;
+  margin: 10px;
+  margin-top: 25%;
+}
+
+#form-container {
+  position: relative;
+  //margin-top: 10%;
+  left: -10%;
+  height: 410px;
+  padding: 12px;
+  background-color: #fff;
+  opacity: .8;
+  border: 1px solid white;
+}
+
+form {
+  position: relative;
+  //left: 20%;
+  //background-color: #fff;
+  height: 425px;
+  margin-top: 27%;
+  z-index: 7;
+}
+
+input[type="text"] {
+  padding: 4px;
+  border: none;
+  border-bottom: 2px solid #778899;
+  transition: border 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="text"].focus {
+  outline: none;
+  border-bottom: 2px solid #38B0DE;
+}
+
+textarea:focus {
+  box-shadow: 0 0 10px 5px #38B0DE;
+}
+
+input[type="submit"] {
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #388E8E;
+}
+
+input[name="phone"] {
+  margin-bottom: 5px;
+}
+
+input[type="submit"]:focus,
+input[type="submit"].focus {
+  box-shadow: 0 0 10px 5px #388E8E;
 }
 
 form fieldset {
@@ -152,28 +329,216 @@ form fieldset {
 	border: 0;
 }
 
-#form span {
-	top: -30px;
-	width: 200px;
-	left: -80px;
-}
-
-textarea {
-	position: absolute;
-	top: 210px;
-	//left: -5px;
-}
-
-input #form_first {
-	left: -20px;
-}
-
 footer {
-	min-width: 100%;
-	height: 100px;
-	background-color: #000;
+  position: fixed;
+  bottom: 0;
+	width: 105%;
+	height: 80px;
+	background-color: #388E8E;
 	color: #fff;
-	position: fixed;
-	bottom: 0;
 	text-align: center;
+  font-family: 'Typography Times', Georgia, Serif;
+  font-size: 1.2em;
+  box-shadow: 0 -5px 10px 5px #000000;
+  z-index: 99;
+}
+
+footer a {
+	text-decoration: none;
+	color: white;
+}
+
+footer a:hover {
+	color: #000000;
+	background-color: #ffffff;
+	border-radius: 5px;
+}
+
+footer div {
+  position: relative;
+  top: 15px;
+}
+
+
+@media(max-width: 1465px) {
+
+  #hire {
+    left: 84.5%
+  }
+
+  #aboutme {
+    margin-top: 33%;
+    //margin-left: -2%;
+  }
+
+}
+
+@media(max-width: 1365px) {
+  #aboutme {
+    margin-top: 36%;
+  }
+}
+
+@media(max-width: 1330px) {
+  #hire {
+    left: 83.5%;
+  }
+
+  #description {
+    left: 55%;
+  }
+
+  #aboutme {
+    margin-top: 37%;
+  }
+}
+
+@media(max-width: 1285px) {
+  #aboutme {
+    margin-top: 38%;
+  }
+}
+
+@media(max-width: 1230px) {
+  #hire {
+    left: 82.5%;
+  }
+
+  #aboutme {
+    margin-top: 39.5%;
+  }
+}
+
+@media(max-width: 1180px) {
+  #aboutme {
+    margin-top: 41%;
+  }
+}
+
+@media(max-width: 1130px) {
+  #hire {
+    left: 80%;
+  }
+
+  #description {
+    left: 58%;
+  }
+
+  #aboutme {
+    margin-top: 43%;
+  }
+}
+
+@media(max-width: 1080px) {
+  #aboutme {
+    margin-top: 45%;
+  }
+}
+
+@media(max-width: 1040px) {
+  #aboutme {
+    margin-top: 46.5%;
+  }
+}
+
+@media(max-width: 1000px) {
+  #aboutme {
+    margin-top: 48.5%;
+  }
+}
+
+@media(max-width: 950px) {
+  #hire {
+    left: 78%;
+  }
+
+  #description {
+    left: 61%;
+  }
+
+  #aboutme {
+    margin-top: 50.5%;
+  }
+}
+
+@media(max-width: 915px) {
+  #aboutme {
+    margin-top: 52%;
+  }
+}
+
+@media(max-width: 875px) {
+  #aboutme {
+    margin-top: 55%
+  }
+}
+
+@media(max-width: 830px) {
+  #hire {
+    left: 75%;
+  }
+
+  #description {
+    left: 64.5%;
+  }
+
+  #aboutme {
+    margin-top: 58.5%;
+  }
+}
+
+@media(max-width: 770px) {
+  #aboutme {
+    margin-top: 63%;
+  }
+}
+
+@media(max-width: 710px) {
+  #hire {
+    left: 72%;
+  }
+
+  #description {
+    left: 96%;
+  }
+
+  #name {
+    left: 35%;
+  }
+
+  #description {
+    left: 42%;
+  }
+
+  #aboutme {
+    margin-top: 70%;
+  }
+}
+
+@media(max-width: 620px) {
+  #hire {
+    left: 70%;
+  }
+
+  #name {
+    left: 30%;
+  }
+
+  #description {
+    left: 40%;
+  }
+}
+
+@media(max-width: 570px) {
+  #hire {
+    left: 67%;
+  }
+
+  #name {
+    left: 15%;
+  }
+
+  #description {
+    left: 36%;
+  }
 }

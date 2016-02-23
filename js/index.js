@@ -2,6 +2,7 @@
 $('#name:first').hide();
 $('#description:first').hide();
 $('#hire:first').hide();
+//$('#skills').hide();
 
 function start() {
 	$('#name:first').fadeIn(4000, function() {
@@ -36,7 +37,7 @@ function animClick() {
 
 	$('a:p').click(function(e) {
 		e.preventDefault();
-		
+
 		if(this === document.getElementById('name')){
 			scrollTo = document.getElementById('about_me');
 			scrollTo.scrollIntoView();
@@ -73,8 +74,18 @@ function enableTextArea() {
 
 }
 
+$('#menu-down').click(function() {
+  $('html,body').animate({scrollTop: $('#about_me').offset().top}, 1200);
+});
+
+$('#menu-down-2').click(function() {
+	$('html,body').animate({scrollTop: $('#my_skills').offset().top}, 1200);
+});
+
+$('#glyphicon-skills-menu').click(function(){
+  $('#skills').show(1000);
+});
 
 
 
 $(document).ready(start, enableTextArea);
-

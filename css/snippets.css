@@ -1,0 +1,198 @@
+#skills{
+	//position: absolute;
+	//width: 205px;
+	//height: 350px;
+	//top: 80px;
+	//left: 5px;
+  font-family: 'Typography Times', Georgia, Serif;
+}
+
+h3 {
+	-webkit-box-shadow: 5px 5px 20px 2px #000000;
+	//position: relative;
+	height: 23px;
+	width: 180px;
+	background-color: #3366ff;
+	color: #ffffff;
+	margin-bottom: 15px;
+  font-size: 1.3em;
+}
+
+
+#info {
+        //border: 1px solid black;
+        //width: 800px;
+        //height: 400px;
+        //left: 280px;
+        //top: 100px;
+        //display: inline;
+        //position: absolute;
+        background-color: #3366ff;
+        color: #fff;
+        -webkit-box-shadow: 5px 5px 20px 2px #000000;
+}
+
+#info-text {
+        margin: 10px;
+}
+
+table {
+        position: relative;
+        display: absolute;
+        left: 150px
+}
+
+form fieldset {
+	display: inline-block;
+	float: right;
+	position: relative;
+	margin-bottom: 5px;
+	border: 0;
+}
+
+input #form_first {
+	left: -20px;
+}
+
+#submit:hover {
+       color: #ffffff;
+       background-color: #000000;
+
+}
+
+#menu-down:hover {
+        cursor: pointer;
+}
+
+#menu-down-2:hover {
+        cursor: pointer;
+}
+
+.glyphicon-down-arrow {
+  color: #fff;
+  font-size: 1.5em;
+  display: inline;
+  position: relative;
+  float: right;
+  top: 770px;
+  right: 50px;
+}
+
+
+
+
+
+#form span {
+	top: 140px;
+	width: 200px;
+	left: -80px;
+}
+
+h1 {
+	position: absolute;
+	top: 20px;
+	left: 0;
+	background-color: #3366ff;
+	color: #ffffff;
+        font-size: 2.3em;
+}
+
+#myskills {
+	width: 100%;
+}
+
+#form {
+ //float: right;
+ position: relative;
+ //right: 40px;
+ //left: 250px;
+ //top: 160px;
+ //width: 250px;
+}
+
+textarea {
+ position: relative;
+ top: 0;
+ left: 0;
+ }
+
+ #submit {
+   position: absolute;
+   top: 330px;
+   left: 215px;
+   height: 30px;
+   background-color: #3366ff;
+   color: #fff;
+   border-radius: 5px;
+   border: 0;
+ }
+
+
+
+
+
+
+
+
+ @media (min-height: 1000px;) {
+
+    #name {
+ 	display: block;
+ 	position: absolute;
+ 	top: 500px;
+ 	font-family: 'Typography Times', Georgia, Serif;
+ 	font-size: 3em;
+ 	color: #fff;
+ 	//-webkit-transform: rotate(-25deg);
+   //-moz-transform: rotate(-25deg);
+    }
+
+    #description	 {
+ 	display: block;
+ 	position: absolute;
+ 	top: 590px;
+ 	font-family: 'Typography Times', Georgia, Serif;
+ 	font-size: 2em;
+ 	color: #fff;
+ 	//-webkit-transform: rotate(-25deg);
+   //-moz-transform: rotate(-25deg);
+    }
+
+    #hire {
+ 	display:block;
+ 	position: absolute;
+ 	top: 610px;
+ 	font-family: 'Typography Times', Georgia, Serif;
+ 	font-size: 2.5em;
+ 	color: #fff;
+ 	//-webkit-transform: rotate(-25deg);
+   //-moz-transform: rotate(-25deg);
+    }
+
+    #form {
+  //float: right;
+  position: relative;
+  //right: 40px;
+  top: 240px;
+  //width: 350px;
+    }
+
+    textarea {
+  		position: absolute;
+  		top: 230px;
+      left: 20px;
+  		//left: -5px;
+  	}
+
+   #submit {
+ 		position: relative;
+ 		top: 280px;
+ 		left: 210px;
+ 		height: 30px;
+ 		background-color: #3366ff;
+ 		color: #fff;
+ 		border-radius: 5px;
+ 		border: 0;
+ 	}
+
+ }
