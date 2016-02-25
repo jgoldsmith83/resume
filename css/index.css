@@ -1,10 +1,28 @@
+Font Imports*/
 
+/*Local Font, stored on host*/
 @font-face {
-  font-family: "Typography Times";
-  src: url("Typography_Times.ttf") format('truetype');
+  font-family: 'Typography Times';
+  src: url('Typography_Times.eot'); /* IE9 Compat Modes */
+  src: url('Typography_Times.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Typography_Times.woff2') format('woff2'), /* Super Modern Browsers */
+       url('Typography_Times.woff') format('woff'), /* Pretty Modern Browsers */
+       url('Typography_Times.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Typography_Times.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
-@-webkit-keyframes moverotate{
+/*If local font which is stored on computer doesn't work, should fall to this*/
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text:400,600);
+
+/*---End Font Imports---*/
+
+
+
+/*Animation*/
+
+/*-webkit- (Chrome, newer versions of Opera.)*/
+@-webkit-keyframes moverotate,
+@keyframes moverotate,{
 	0% {
 		-webkit-transform: rotate(-25deg);
 	}
@@ -18,7 +36,23 @@
 	-webkit-animation-fill-mode: forwards;
 }
 
-@keyframes moverotate{
+/*-moz- (Firefox)*/
+@-moz-keyframes moverotate{
+  0% {
+    transform: rotate(-25deg);
+  }
+  50% {
+    transform: rotate(25deg);
+  }
+  100% {
+    transform: rotate(-25deg);
+  }
+
+  animation-fill-mode: forwards;
+}
+
+/*-o- (Old versions of Opera)*/
+@-o-keyframes moverotate{
 	0% {
 		transform: rotate(-25deg);
 	}
@@ -32,13 +66,24 @@
 	animation-fill-mode: forwards;
 }
 
-html, body {
-	margin: 0;
-	padding: 0;
-	border: 0;
-  max-width: 100%;
+/*Everything else, IE does not support keyframes*/
+@keyframes moverotate{
+  0% {
+    transform: rotate(-25deg);
+  }
+  50% {
+    transform: rotate(25deg);
+  }
+  100% {
+    transform: rotate(-25deg);
+  }
+
+  animation-fill-mode: forwards;
 }
 
+/*---End of Animation---*/
+
+/*Global Variables*/
 div {
   border: 0;
   margin: 0;
@@ -51,6 +96,8 @@ div {
 .row {
   width: 100%;
 }
+
+/*---End of Global Variables---*/
 
 #landing {
 position: absolute;
@@ -144,7 +191,7 @@ opacity: .5;
 margin-top: 31%;
 //left: 450px;
 font-size: 2em;
-font-family: 'Typography Times', Georgia, Serif;
+font-family: 'Crimson Text', 'Typography Times', Georgia, Serif;
 }
 
 #my_skills {
@@ -331,8 +378,9 @@ form fieldset {
 
 footer {
   position: fixed;
+  margin-left: 15px;
   bottom: 0;
-	width: 105%;
+	width: 100%;
 	height: 80px;
 	background-color: #388E8E;
 	color: #fff;
@@ -359,6 +407,19 @@ footer div {
   top: 15px;
 }
 
+/*Responsive Rules*/
+
+@media screen and (min-width:480px) {
+  #myskills {
+    float: left;
+  }
+  #info {
+
+  }
+  #form-container {
+    float: right;
+  }
+}
 
 @media(max-width: 1465px) {
 
