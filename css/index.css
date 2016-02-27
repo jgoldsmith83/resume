@@ -17,73 +17,9 @@ Font Imports*/
 /*---End Font Imports---*/
 
 
-
-/*Animation*/
-
-/*-webkit- (Chrome, newer versions of Opera.)*/
-@-webkit-keyframes moverotate,
-@keyframes moverotate,{
-	0% {
-		-webkit-transform: rotate(-25deg);
-	}
-	50% {
-		-webkit-transform: rotate(25deg);
-	}
-	100% {
-		-webkit-transform: rotate(-25deg);
-	}
-
-	-webkit-animation-fill-mode: forwards;
+body, html {
+  overflow-x: hidden;
 }
-
-/*-moz- (Firefox)*/
-@-moz-keyframes moverotate{
-  0% {
-    transform: rotate(-25deg);
-  }
-  50% {
-    transform: rotate(25deg);
-  }
-  100% {
-    transform: rotate(-25deg);
-  }
-
-  animation-fill-mode: forwards;
-}
-
-/*-o- (Old versions of Opera)*/
-@-o-keyframes moverotate{
-	0% {
-		transform: rotate(-25deg);
-	}
-	50% {
-		transform: rotate(25deg);
-	}
-	100% {
-		transform: rotate(-25deg);
-	}
-
-	animation-fill-mode: forwards;
-}
-
-/*Everything else, IE does not support keyframes*/
-@keyframes moverotate{
-  0% {
-    transform: rotate(-25deg);
-  }
-  50% {
-    transform: rotate(25deg);
-  }
-  100% {
-    transform: rotate(-25deg);
-  }
-
-  animation-fill-mode: forwards;
-}
-
-/*---End of Animation---*/
-
-/*Global Variables*/
 div {
   border: 0;
   margin: 0;
@@ -106,7 +42,7 @@ min-height: 100%;
 margin: 0;
 padding: 0;
 border: 0;
-background: #ffffff url("../images/space.jpg") no-repeat scroll center center;
+background: #ffffff url("../images/riverbank.jpg") no-repeat scroll center center;
 background-size: cover;
 box-shadow: 0 25px 25px 0 #000;
 z-index: 10;
@@ -124,8 +60,6 @@ left: 40%;
 font-family: 'Typography Times', Georgia, Serif;
 font-size: 3em;
 color: #fff;
-//-webkit-transform: rotate(-25deg);
-//-moz-transform: rotate(-25deg);
 }
 
 #description	 {
@@ -136,29 +70,33 @@ left: 52.5%;
 font-family: 'Typography Times', Georgia, Serif;
 font-size: 2em;
 color: #fff;
-//-webkit-transform: rotate(-25deg);
-//-moz-transform: rotate(-25deg);
 }
 
 #hire {
-display: block;
-position: absolute;
-top: 93%;
-left: 85.5%;
+display: inline;
+position: relative;
+//top: 93%;
+//left: 85.5%;
+margin-right: 5px;
 font-family: 'Typography Times', Georgia, Serif;
 font-size: 2.5em;
 color: #fff;
-//-webkit-transform: rotate(-25deg);
-//-moz-transform: rotate(-25deg);
 }
 
 .glyphicon-down-arrow {
+  display: inline;
+  position: relative;
   color: #fff;
   font-size: 1.5em;
+  //top: 95%;
+  //left: 95%;
+}
+
+.down-arrow-wrapper {
   position: absolute;
-  display: inline;
-  top: 95%;
-  left: 95%;
+  right: 90px;
+  bottom: 15px;
+  text-align: right;
 }
 
 #menu-down:hover {
@@ -187,9 +125,7 @@ position: relative;
 background-color: #fff;
 color: #000;
 opacity: .5;
-//width: 100%;
-margin-top: 31%;
-//left: 450px;
+margin-top: 490px;
 font-size: 2em;
 font-family: 'Crimson Text', 'Typography Times', Georgia, Serif;
 }
@@ -202,117 +138,112 @@ margin: 0;
 padding: 0;
 left: 0;
 width: 100%;
-height: 80%;
+height: auto;
+min-height: 100%;
 box-shadow: 0 25px 25px 0 #000;
-background: #FFFFFF url("../images/keys2.jpg") no-repeat scroll center center;
+background-color: #CD6600;
 background-size: 100%;
 z-index: 7;
 }
 
-.about-con {
+.bread-wrapper {
+  display:inline-flex;
   position: relative;
-  left: 10%;
-  background-color: #fff;
-  opacity: .8;
-  height: 425px;
-  padding: 12px;
+  padding: 0;
+  top: -5px;
+  left: 135px;
 }
 
-.about-content {
-  margin: 0;
-  //margin-top: 2%;
-  width: 100%;
-  height: 80%;
-  border: 0;
-  //display: none;
+.breadcrumb {
+  padding: 0;
+  color: #FFF;
+  background-color: #CD6600;
 }
 
-#title-center {
-  position: relative;
-  padding: 2px;
-  //margin-top: 4%;
-  width: 100%;
-  text-align: center;
-}
-
-#title-left {
-  padding: 2px;
-  margin-top: 1.5%;
-  float: right;
-  margin-right: 5.9%;
-  border-radius: 0 2px 0 0;
-}
-
-#title-right {
-  padding: 2px;
-  margin-top: 4%;
-  float: left;
-  margin-left: 4%;
-  text-align: right;
-  border-radius: 2px 0 0 0;
+.breadcrumb a,
+.breadcrumb a:hover {
+  color: #FFF;
+  text-decoration: none;
 }
 
 .banner {
-	-webkit-box-shadow: 5px 5px 20px 2px #000000;
-	height: 23px;
-	width: 180px;
+  position: absolute;
+  right: 0;
+  top: 15px;
 	background-color: #388E8E;
 	color: #ffffff;
 	margin-bottom: 15px;
   font-size: 1.3em;
+  padding: 12px;
+	-webkit-box-shadow: -5px 5px 20px 2px #000000;
   font-family: 'Typography Times', Georgia, Serif;
 }
 
-#skills{
-	position: relative;
-	//width: 205px;
-	//height: 350px;
-	top: 25%;
-	//left: 5px;
-  font-family: 'Typography Times', Georgia, Serif;
-}
-
-.list {
-  border-bottom: 2px solid #388E8E;
-	height: 23px;
-	width: 180px;
-  padding: 5px;
-  margin-left: 10px;
-	background-color: transparent;
-	color: #000;
-  border-radius: 5px;
-  font-size: 1.4em;
-  font-family: 'Typography Times', Georgia, Serif;
-}
-
-#info {
+.projects-wrapper {
   position: relative;
-  //border: 1px solid black;
+  margin-top: 110px;
+  margin-left: 135px;
+  padding-top: 20px;
+  background-color: #8B4500;
+  box-shadow: -2px 0 10px 5px #000;
+}
+
+.project-container {
+  margin-bottom: 40px;
+  margin-left: 45px;
+  //padding: 20px;
+  background-color: #3B3738;
+  color: #fff;
+  box-shadow: 5px 5px 10px 2px #000;
+}
+
+.project-img {
+  width: 205px;
+  height: 100px;
+  margin: 20px 0 0 20px;
+  box-shadow: 5px 5px 10px 2px #000;
+}
+
+.project-img:hover {
+  cursor: pointer;
+}
+
+hr {
   width: 80%;
-  height: 500px;
-  margin-top: 5%;
-  margin-left: 18.5%;
-  //padding-top: 5%;
-  background-color: #fff;
-  opacity: .8;
-  color: #000;
-  font-size: 1.05em;
-  font-weight: bold;
+  margin-left: -15px;
+}
+
+.info {
   font-family: 'Typography Times', Georgia, Serif;
-  box-shadow: 0 0 20px 10px #000000;
-  -webkit-box-shadow: 0 0 20px 5px #000000;
-  z-index: 8;
+}
+
+.img-modal-parent {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.modal {
+  min-width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.modal-dialog {
+  min-width: 90%;
+  max-width: 90%;
+  height: auto;
+  background-color: #000;
+}
+
+.modal-image {
+  width: 90%;
+  margin-left: 5%;
+  height: auto;
 }
 
 table {
   position: relative;
   left: 17%;
-}
-
-#info-text {
-  padding: 10px;
-  margin: 10px;
-  margin-top: 25%;
 }
 
 #form-container {
@@ -382,13 +313,13 @@ footer {
   bottom: 0;
 	width: 100%;
 	height: 80px;
-	background-color: #388E8E;
+	background-color: #3B3738;
 	color: #fff;
 	text-align: center;
   font-family: 'Typography Times', Georgia, Serif;
   font-size: 1.2em;
   box-shadow: 0 -5px 10px 5px #000000;
-  z-index: 99;
+  z-index: 8;
 }
 
 footer a {
@@ -408,198 +339,18 @@ footer div {
 }
 
 /*Responsive Rules*/
-
-@media screen and (min-width:480px) {
-  #myskills {
-    float: left;
+@media screen and (max-width:1199px) {
+  #my_skills {
+    height: auto;
   }
-  #info {
 
-  }
-  #form-container {
-    float: right;
+  .projects-wrapper {
+    margin-bottom: 120px;
   }
 }
 
-@media(max-width: 1465px) {
-
-  #hire {
-    left: 84.5%
-  }
-
-  #aboutme {
-    margin-top: 33%;
-    //margin-left: -2%;
-  }
-
-}
-
-@media(max-width: 1365px) {
-  #aboutme {
-    margin-top: 36%;
-  }
-}
-
-@media(max-width: 1330px) {
-  #hire {
-    left: 83.5%;
-  }
-
-  #description {
-    left: 55%;
-  }
-
-  #aboutme {
-    margin-top: 37%;
-  }
-}
-
-@media(max-width: 1285px) {
-  #aboutme {
-    margin-top: 38%;
-  }
-}
-
-@media(max-width: 1230px) {
-  #hire {
-    left: 82.5%;
-  }
-
-  #aboutme {
-    margin-top: 39.5%;
-  }
-}
-
-@media(max-width: 1180px) {
-  #aboutme {
-    margin-top: 41%;
-  }
-}
-
-@media(max-width: 1130px) {
-  #hire {
-    left: 80%;
-  }
-
-  #description {
-    left: 58%;
-  }
-
-  #aboutme {
-    margin-top: 43%;
-  }
-}
-
-@media(max-width: 1080px) {
-  #aboutme {
-    margin-top: 45%;
-  }
-}
-
-@media(max-width: 1040px) {
-  #aboutme {
-    margin-top: 46.5%;
-  }
-}
-
-@media(max-width: 1000px) {
-  #aboutme {
-    margin-top: 48.5%;
-  }
-}
-
-@media(max-width: 950px) {
-  #hire {
-    left: 78%;
-  }
-
-  #description {
-    left: 61%;
-  }
-
-  #aboutme {
-    margin-top: 50.5%;
-  }
-}
-
-@media(max-width: 915px) {
-  #aboutme {
-    margin-top: 52%;
-  }
-}
-
-@media(max-width: 875px) {
-  #aboutme {
-    margin-top: 55%
-  }
-}
-
-@media(max-width: 830px) {
-  #hire {
-    left: 75%;
-  }
-
-  #description {
-    left: 64.5%;
-  }
-
-  #aboutme {
-    margin-top: 58.5%;
-  }
-}
-
-@media(max-width: 770px) {
-  #aboutme {
-    margin-top: 63%;
-  }
-}
-
-@media(max-width: 710px) {
-  #hire {
-    left: 72%;
-  }
-
-  #description {
-    left: 96%;
-  }
-
-  #name {
-    left: 35%;
-  }
-
-  #description {
-    left: 42%;
-  }
-
-  #aboutme {
-    margin-top: 70%;
-  }
-}
-
-@media(max-width: 620px) {
-  #hire {
-    left: 70%;
-  }
-
-  #name {
-    left: 30%;
-  }
-
-  #description {
-    left: 40%;
-  }
-}
-
-@media(max-width: 570px) {
-  #hire {
-    left: 67%;
-  }
-
-  #name {
-    left: 15%;
-  }
-
-  #description {
-    left: 36%;
+@media screen and (max-width:620px) {
+  #tag {
+    font-size: 0.85em;
   }
 }

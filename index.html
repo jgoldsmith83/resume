@@ -6,12 +6,14 @@
 		<meta lang="en">
 		<meta charset="UTF-8">
 
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="css/index.css">
 
 		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/handlebars.js"></script>
+    <script type="text/javascript" src="js/projects_data.js"></script>
 	</head>
 
 	<body>
@@ -19,99 +21,41 @@
   		<div id="landing">
   			<p id="name">Justin L Goldsmith</p>
   			<p id="description">Developer</p>
-  			<p id="hire">[Hire Me]</p>
-        <span class="glyphicon glyphicon-menu-down glyphicon-down-arrow" id="menu-down"></span>
+        <div class="container down-arrow-wrapper">
+  			   <p id="hire">[Hire Me]</p>
+          <span class="glyphicon glyphicon-menu-down glyphicon-down-arrow" id="menu-down"></span>
+        </div>
   		</div>
     </div>
 
-  		<div class="container-fluid" id="about_me">
-  			<div id="aboutme">
-          <div id="about-inner">
-            <p>
-    				  I am a Charleston, SC native.<br>
-    				  Interested in working and thriving in the Lowcountry.
-            </p>
+  		<div id="about_me">
+  			<div class="container-fluid" id="aboutme">
+              <p>
+      				  I am a Charleston, SC native.<br>
+      				  <span id="tag">Committed to working and thriving in the Lowcountry.</span>
+              </p>
+          </div>
+          <div class="container down-arrow-wrapper">
+            <span class="glyphicon glyphicon-menu-down glyphicon-down-arrow" id="menu-down-2"></span>
           </div>
   			</div>
-
-                          <span class="glyphicon glyphicon-menu-down glyphicon-down-arrow" id="menu-down-2"></span>
-  		</div>
     </div>
 
-    <div class="container-fluid">
 		<div id="my_skills">
-      <div class="row about-content">
-      <div class="container-fluid col-sm-2 col-md-3 col-lg-3 col-xl-3 about-con border-right">
-			<p id="myskills">
-				<h3 id="title-left" class="banner">What I can do...&nbsp</h3>
-			</p>
-			<div id="skills">
-				<p><span><h3 class="list">HTML / CSS         </h3></span></p>
-				<p><span><h3 class="list">Bootstrap          </h3></span></p>
-        <p><span><h3 class="list">Handlebars         </h3></span></p>
-        <p><span><h3 class="list">JavaScript     </h3></span></p>
-        <p><span><h3 class="list">jQuery             </h3></span></p>
-				<p><span><h3 class="list">Meteor.js              </h3></span></p>
-				<p><span><h3 class="list">Python             </h3></span></p>
-			</div>
-    </div>
-
-    <div class="container-fluid col-sm-8 col-md-5 col-lg-5 col-xl-5 border-right">
-      <div id="info">
-        <h3 id="title-center" class="banner"> An introduction. </h3>
-        <p id="info-text">
-            I am Justin and I am currently seeking my first job as a web developer. Take a look around and you should
-            get a pretty good idea of what my experience, style, and interests are.
-            <br>
-            <br>
-            I have studied programming, web development, and web design since 2012. I am a graduate of
-            Trident Technical College with an Associates Degree in Computer Programming with a concenctration
-            in Web Programming.
-            <br>
-            In addition to web development, I am also an experienced Linux user and administrator. I have earned certificates
-            from the Linux Foundation in Linux Administration. I also have experience as an enterprise Windows Server
-            Administrator and Enterprise level Network Administrator.
-            <br>
-            <br>
-            Currently, I am studying responsive web design, python for informatics, and object oriented design and data structures
-            with Java (a precursor to Android app and system development).
-            <br>
-            <br>
-        </p>
+      <div class="row-fluid about-content">
+        <h3 class="banner">Things I have done...&nbsp</h3>
+      <div class="container col-sm-12 col-md-11 col-lg-11 col-xl-11 projects-wrapper">
+        <div id="projects-content"></div>
+      </div>
+      <div class="container bread-wrapper">
+        <ul class="breadcrumb">
+          <li><a href="#">Learn more</a></li>
+          <li><a href="https://www.github.com/jgoldsmith83" target="_blank">Github</a></li>
+          <li><a href="#">Contact me</a></li>
+        </ul>
       </div>
     </div>
-
-    <div class="container-fluid col-sm-2 col-md-3 col-lg-3 col-xl-3">
-			<div id="form-container">
-        <h3 id="title-right" class="banner">Let's work together!</h3>
-				<form action="mailer.php" method="post">
-					<fieldset class="form_left">
-						<label for="first">First: &nbsp</label>
-            <input type="text" id="first" name="first">
-					</fieldset>
-					<fieldset class="form_right">
-						<label for="last">Last: &nbsp</label>
-            <input type="text" id="last" name="last">
-					</fieldset>
-					<fieldset class="form_left">
-						<label for="email">Email: &nbsp</label>
-            <input type="text" id="email" name="email">
-					</fieldset>
-					<fieldset class="form_right">
-						<label for="phone">Phone: &nbsp</label>
-            <input type="text" id="phone" name="phone" onkeydown="enableTextArea()">
-					</fieldset>
-          <fieldset>
-					  <textarea id="text_area" name="message" rows="5" cols="30" placeholder="How can we work together?" wrap="soft"></textarea>
-          </fieldset>
-          <br>
-          <fieldset>
-            <input id="submit" name="send-form" type="submit" value="Come work with us!">
-          </fieldset>
-				</form>
-			</div>
-    </div>
-    </div>
+  </div>
 
 
       <div class="row">
@@ -133,8 +77,73 @@
 				</p>
         </div>
 			</footer>
-    </div>
+      </div>
 		</div>
+
+    <div id="form-modal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body" id="modal-body">
+          <div id="form-container">
+    				<form action="mailer.php" method="post">
+    					<fieldset class="form_left">
+    						<label for="first">First: &nbsp</label>
+                <input type="text" id="first" name="first">
+    					</fieldset>
+    					<fieldset class="form_right">
+    						<label for="last">Last: &nbsp</label>
+                <input type="text" id="last" name="last">
+    					</fieldset>
+    					<fieldset class="form_left">
+    						<label for="email">Email: &nbsp</label>
+                <input type="text" id="email" name="email">
+    					</fieldset>
+    					<fieldset class="form_right">
+    						<label for="phone">Phone: &nbsp</label>
+                <input type="text" id="phone" name="phone" onkeydown="enableTextArea()">
+    					</fieldset>
+              <fieldset>
+    					  <textarea id="text_area" name="message" rows="5" cols="30" placeholder="How can we work together?" wrap="soft"></textarea>
+              </fieldset>
+              <br>
+              <fieldset>
+                <input id="submit" name="send-form" type="submit" value="Come work with us!">
+              </fieldset>
+    				</form>
+    			</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+  <script type="text/x-handlebars-template" id="template">
+    {{#each projects}}
+      <div class="container col-lg-3 project-container">
+        <img src={{imgSrc}} data-id="{{@index}}" class="project-img"/>
+        <hr>
+        <h3 class="title info">{{title}}</h3>
+        <p class="uses info">{{uses}}</p>
+      </div>
+    {{/each}}
+  </script>
+
+  <div id="img-modal-parent"></div>
+
+  <script type="text/x-handlebars-template" id="img-modal-template">
+    <div id="img-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+            <h2>{{title}}</h2>
+          </div>
+          <div class="modal-body" id="modal-body">
+            <img class="modal-image" src="{{imgSrc}}"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
 
 	<script type="text/javascript" src="js/index.js"></script>
 	</body>

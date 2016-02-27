@@ -86,6 +86,31 @@ $('#glyphicon-skills-menu').click(function(){
   $('#skills').show(1000);
 });
 
+var template = document.getElementById('template').innerHTML;
+var fillWith = Handlebars.compile(template);
+document.getElementById('projects-content').innerHTML += fillWith(projectsData);
+
+//show the modal
+$('.project-img').click( function(e) {
+	var imgIndex = $(this).data('id');
+	var img = projectsData.projects[imgIndex];
+
+	var imgModalTemplate = document.getElementById("img-modal-template").innerHTML;
+	var fillModal = Handlebars.compile(imgModalTemplate);
+
+	document.getElementById("img-modal-parent").innerHTML += fillModal(img);
+	$('#img-modal').modal('show');
+
+	$('#img-modal').on('hidden.bs.modal', function() {
+		//$('#image-modal').remove();
+		var parent = document.getElementById('img-modal-parent');
+		var child = document.getElementById('img-modal');
+
+		parent.removeChild(child);
+		//location.reload(true);
+		//console.log("modal hidden");
+	})
+});
 
 
 $(document).ready(start, enableTextArea);
