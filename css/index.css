@@ -339,13 +339,9 @@ footer div {
 }
 
 /*Responsive Rules*/
-@media screen and (max-width:1199px) {
-  #my_skills {
-    height: auto;
-  }
-
-  .projects-wrapper {
-    margin-bottom: 120px;
+@media screen and (max-width:1395px) {
+  .bread-wrapper {
+    margin-bottom:80px;
   }
 }
 
